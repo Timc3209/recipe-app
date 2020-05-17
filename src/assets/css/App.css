@@ -23,35 +23,27 @@ body {
   margin: 10px 0;
 }
 
-.recipe a {
+.recipe-action {
+  float: right;
+  text-align: center;
+  padding: 1rem;
+  width: 50px;
   cursor: pointer;
   color: #2c3e00;
 }
 
-.recipe a:hover {
+.recipe-action:hover,
+.recipe-toggle:hover {
   color: #fff;
 }
 
-.recipe .delete {
-  float: right;
-  text-align: center;
-  padding: 1rem;
-  width: 50px;
-}
-
-.recipe .edit {
-  float: right;
-  text-align: center;
-  padding: 1rem;
-  width: 50px;
-}
-
-.recipe .toggle {
+.recipe-toggle {
   display: block;
   padding: 0.75rem 1.25rem;
+  cursor: pointer;
 }
 
-.recipe .toggle span {
+.recipe-title {
   padding-left: 15px;
   font-size: 1.35em;
 }
