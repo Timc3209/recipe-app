@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 
 export const TacoRecipe: RecipeState = {
   id: uuidv4(),
-  url: "",
+  url:
+    "https://raw.githubusercontent.com/Timc3209/recipe-app/master/src/assets/images/taco.jpg",
   title: "Beef Tacos",
   ingredients: [
     "1 pound ground beef",
@@ -22,7 +23,8 @@ export const TacoRecipe: RecipeState = {
 
 export const EnchiladaRecipe: RecipeState = {
   id: uuidv4(),
-  url: "",
+  url:
+    "https://raw.githubusercontent.com/Timc3209/recipe-app/master/src/assets/images/enchilada.jpg",
   title: "Beef Enchiladas",
   ingredients: [
     "1 pound ground beef",
@@ -41,7 +43,8 @@ export const EnchiladaRecipe: RecipeState = {
 
 export const QuesadillaRecipe: RecipeState = {
   id: uuidv4(),
-  url: "",
+  url:
+    "https://raw.githubusercontent.com/Timc3209/recipe-app/master/src/assets/images/quesadilla.jpg",
   title: "Chicken Quesadillas",
   ingredients: [
     "6 oz chicken breast strips",
