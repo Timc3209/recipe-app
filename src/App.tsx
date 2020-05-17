@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import RecipeList from "./components/RecipeList";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/store";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/css/App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <div className="App">
+          <header className="header">
+            <h1 className="text-success">Recipe App</h1>
+          </header>
+          <RecipeList />
+        </div>
+      </PersistGate>
+    </Provider>
   );
 }
 
