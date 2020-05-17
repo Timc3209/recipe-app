@@ -27,25 +27,29 @@ export default class Recipe extends React.Component<Props, States> {
     isOpen: false,
   };
 
-  toggle = () => {
+  toggle = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
     this.setState({ isOpen: !this.state.isOpen });
+  };
+
+  onEdit = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    this.props.editRecipe();
+  };
+
+  onDelete = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    this.props.deleteRecipe();
   };
 
   render() {
     const { isOpen } = this.state;
-    const {
-      url,
-      title,
-      ingredients,
-      directions,
-      editRecipe,
-      deleteRecipe,
-    } = this.props;
+    const { url, title, ingredients, directions } = this.props;
 
     return (
       <ListGroupItem className="recipe">
         <a
-          onClick={deleteRecipe}
+          onClick={this.onDelete}
           className="delete"
           href="/#"
           data-testid="btnDelete"
@@ -53,7 +57,7 @@ export default class Recipe extends React.Component<Props, States> {
           <FontAwesomeIcon icon={faTrash} />
         </a>
         <a
-          onClick={editRecipe}
+          onClick={this.onEdit}
           className="edit"
           href="/#"
           data-testid="btnEdit"
