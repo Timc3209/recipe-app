@@ -12,7 +12,7 @@ export const TacoRecipe: RecipeState = {
     "10 taco shells",
     "1/2 head lettuce",
     "1 medium tomato",
-    "1 cup shredded cheese",
+    "1 1/2 cup shredded cheese",
   ],
   directions: [
     "Cook beef in 10-inch skillet over medium heat 8 to 10 minutes. stirring occasionally until brown",
