@@ -1,9 +1,10 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import Recipe from "../components/Recipe";
-import { TacoRecipe } from "../config/recipes";
+import { recipes } from "../config/recipes";
 
 test("renders recipe", () => {
+  const TacoRecipe = recipes[0];
   const openEditModal = jest.fn();
   const deleteRecipe = jest.fn();
 

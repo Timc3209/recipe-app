@@ -2,7 +2,7 @@
 
 ## Description
 
-A react project that allow users to view, add, edit and delete recipes.
+A React project that allows users to view, add, edit, and delete recipes stored in local storage.
 
 ## Deployment Link
 
@@ -22,3 +22,10 @@ A deployed version of this project may be found [here.](https://Timc3209.github.
 - TypeScript
 - React / Redux
 - Reactstrap / Bootstrap
+
+## Usage
+
+1. Clone/Download the repo.
+2. Run `yarn install`.
+3. Update the values in `src/config/recipes.ts`.
+4. Run `yarn start` to start a local dev server on port 3000.(http://localhost:3000).

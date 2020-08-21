@@ -6,14 +6,10 @@ import {
   RecipeState,
   RecipeActionTypes,
 } from "../types";
-import {
-  TacoRecipe,
-  EnchiladaRecipe,
-  QuesadillaRecipe,
-} from "../../config/recipes";
+import { recipes } from "../../config/recipes";
 
 export const INITIAL_STATE: RecipeListState = {
-  items: [TacoRecipe, EnchiladaRecipe, QuesadillaRecipe],
+  items: recipes,
 };
 
 export function reducer(state = INITIAL_STATE, action: RecipeActionTypes) {
